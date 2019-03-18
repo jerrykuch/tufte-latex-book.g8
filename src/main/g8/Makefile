@@ -4,7 +4,7 @@
 # and similar tools to navigate from PDF output back to source lines.
 #
 
-base_file_name = $name$
+base_file_name = $name;format="normalize"$
 
 pdf:	\$(base_file_name).tex
 	pdflatex -synctex=1 -shell-escape \$(base_file_name).tex
@@ -21,6 +21,6 @@ preview:	pdf
 
 .PHONY: clean
 clean:
-	rm -f  *.aux *.bbl *.idx *.lof *.log *.lot *.out *.pdf \$(base_file_name).pdf
+	rm -f  *.aux *.bbl *.idx *.lof *.log *.lot *.out *.pdf \$(base_file_name).pdf *.toc
 	rm -rf _minted-\$(base_file_name)
 
