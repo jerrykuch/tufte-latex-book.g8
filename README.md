@@ -31,29 +31,49 @@ my-first-project/
 ├── Manifest.txt
 ├── README.txt
 ├── graphics
-│   ├── be-contents.pdf
-│   ├── be-title.pdf
-│   ├── ei-contents.pdf
-│   ├── ei-title.pdf
-│   ├── helix.asy
-│   ├── helix.pdf
-│   ├── hilbertcurves.pdf
-│   ├── nasa_vision_sm.png
-│   ├── satir_graph.png
-│   ├── sine.asy
-│   ├── sine.pdf
-│   ├── vdqi-contents.pdf
-│   ├── vdqi-title.pdf
-│   ├── ve-contents.pdf
-│   └── ve-title.pdf
+│   ├── ... various images in various formats ...
 ├── my-first-project.bib
 ├── my-first-project.tex
 ├── tufte-book.cls
 ├── tufte-common.def
 └── tufte-handout.cls
 ```
+The 'Manifest.txt' and 'README.txt' files list the original contents
+of the Tufte-LaTeX package. Place your images in the 'graphics'
+directory and remove the provided samples once you're no longer
+referring to them.
+
+Your main document is 'my-first-project.tex' and its BibTeX file is
+'my-first-project.bib' or similar, depending on the name you entered
+during setup.
 
 # Usage
+
+To build the PDF document and generate table of contents, bibliography
+and index:
+```console
+foo@bar:~$ make pdf
+```
+The PDF file will be generated using the canonicalized base name
+determined by Giter8.
+
+To preview the document:
+```console
+foo@bar:~$ make preview
+```
+The Makefile is configured for Mac OS X and will run Preview.app by
+default. Change the appropriate Makefile target to use a different
+viewer.
+
+To clean up the various detritus files produced during LaTeX
+compilation:
+```console
+foo@bar:~$ make clean
+```
+
+SyncTeX files are also generated to ease jumping to source code from
+the generated PDF output for users of tools like TeXShop that support
+such functionality.
 
 # Licenses
 
