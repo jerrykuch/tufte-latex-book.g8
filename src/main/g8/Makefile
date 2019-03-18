@@ -21,6 +21,6 @@ preview:	pdf
 
 .PHONY: clean
 clean:
-	rm -f  *.aux *.bbl *.idx *.lof *.log *.lot *.out *.pdf \$(base_file_name).pdf *.toc
+	rm -f  *.aux *.bbl *.idx *.lof *.log *.lot *.out *.pdf \$(base_file_name).pdf *.toc *.blg *.ind *.synctex.gz
 	rm -rf _minted-\$(base_file_name)
 
